@@ -15,9 +15,13 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
+
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#kanto">Kanto</a>
+                        <a class="nav-link">Region:</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pokemons/kanto/kanto-.html">Kanto</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#johto">Johto</a>
@@ -30,11 +34,12 @@
                     </li>
                 </ul>
             </div> -->
-            <!-- Search bar -->
-            <div class="search-bar">
-                <input type="text" placeholder="Search...">
-                <button type="button">Search</button>
-            </div>
+            <form action="searchresult.html" method="GET">
+                <input type="text" name="query" placeholder="Search...">
+                <button type="submit">Search</button>
+            </form>
+
+
         </nav>
     </header>
 
@@ -42,16 +47,16 @@
         <div class="container mt-4">
             <h1>Pokemon Gallery</h1>
             <section id="kanto">
-                <h2>Kanto Region</h2>
+                <h2><a href="pokemons/kanto/kanto-.html">Kanto Region</a></h2>
                 <div class="gallery">
                     <!-- Add Kanto Pokemon gallery here -->
                     <a href="pokemons/kanto/bulbasaur.html">
                         <img src="bulbasaur.jpg" alt="Bulbasaur">
                         <p>Bulbasaur</p>
                     </a>
-                    <a href="pokemons/kanto/charizard.html">
-                        <img src="charizard.jpg" alt="Charizard">
-                        <p>Charizard</p>
+                    <a href="pokemons/kanto/charmander.html">
+                        <img src="charmander.jpg" alt="Charmander">
+                        <p>Charmander</p>
                     </a>
                     <a href="pokemons/kanto/squirtle.html">
                         <img src="squirtle.jpg" alt="Squirtle">
@@ -61,13 +66,13 @@
                         <img src="pikachu.jpg" alt="Pikachu">
                         <p>Pikachu</p>
                     </a>
-                    
                     <!-- Add more Kanto Pokemon items here -->
                 </div>
             </section>
             
+            
             <section id="johto">
-                <h2>Johto Region</h2>
+                <h2><a href="pokemons/johto/johto-.html">Johto Region</a></h2>
                 <div class="gallery">
                     <!-- Add Johto Pokemon gallery here -->
                     <!-- Example: -->
@@ -97,7 +102,7 @@
             </section>
 
             <section id="hoenn">
-                <h2>Hoenn Region</h2>
+                <h2><a href="pokemons/hoenn/hoenn-.html">Hoenn Region</a></h2>
                 <div class="gallery">
                     <!-- Add Hoenn Pokemon gallery here -->
                     <!-- Example: -->
@@ -124,7 +129,7 @@
             </section>
 
             <section id="sinnoh">
-                <h2>Sinnoh Region</h2>
+                <h2><a href="pokemons/sinnoh/sinnoh-.html">Sinnoh Region</a></h2>
                 <div class="gallery">
                     <!-- Add Sinnoh Pokemon gallery here -->
                     <!-- Example: -->
@@ -141,22 +146,19 @@
                         <img src="piplup.jpg" alt="Piplup">
                         <p>Piplup</p>
                     </a>
-                    
 
-                    <!-- <a href="pokemons/sinnoh/pokemon_name.html">
-                        <img src="pokemon_name.jpg" alt="Pokemon Name">
-                        <p>Pokemon Name</p>
-                    </a> -->
                 </div>
             </section>
         </div>
     </main>
 
-    <footer class="mt-4 bg-light text-center">
-        <p>&copy; 2023 Pokemon Gallery</p>
+    <footer class="mt-4">
+        <p>&copy;2023 Mohammad Hanif Furqan Aufa Putra - GDSC Last Project </p>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-Yf5gtC4C9pDVAiz7e4TF5Jc2I7sMHsU/7Jd5xiF/lvHHZ5a4Y5tDw5v5Y2f5P1tA" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="scripts/searchresult.js"></script>
+
 </body>
 </html>

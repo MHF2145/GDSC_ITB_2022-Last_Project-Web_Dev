@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokemon Gallery</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="../../styles/style.css">
 </head>
 <body>
     <header>
-        <a class="navbar-brand" href="#">Pokemon Gallery</a>
+        <a class="navbar-brand" href="../../index.html">Pokemon Gallery</a>
+
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -17,7 +18,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#johto">johto</a>
+                        <a class="nav-link">Region:</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pokemons/kanto/kanto-.html">Kanto</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#johto">Johto</a>
@@ -30,56 +34,54 @@
                     </li>
                 </ul>
             </div> -->
-            <!-- Search bar -->
-            <div class="search-bar">
-                <input type="text" placeholder="Search...">
-                <button type="button">Search</button>
-            </div>
+            <form action="searchresult.html" method="GET">
+                <input type="text" name="query" placeholder="Search...">
+                <button type="submit">Search</button>
+            </form>
         </nav>
     </header>
 
     <main>
         <div class="container mt-4">
             <h1>Pokemon Gallery</h1>
-            <section id="johto">
-                <h2>Johto Region</h2>
+            <section id="sinnoh">
+                <h2>Sinnoh Region</h2>
                 <div class="gallery">
-                    <!-- Add Johto Pokemon gallery here -->
+                    <!-- Add Sinnoh Pokemon gallery here -->
                     <!-- Example: -->
-                    <a href="chikorita.html">
-                        <img src="chikorita.jpg" alt="Chikorita">
-                        <p>Chikorita</p>
+
+                    <a href="turtwig.html">
+                        <img src="turtwig.jpg" alt="Turtwig">
+                        <p>Turtwig</p>
                     </a>
-                    <a href="cyndaquil.html">
-                        <img src="cyndaquil.jpg" alt="Cyndaquil">
-                        <p>Cyndaquil</p>
+                    <a href="chimchar.html">
+                        <img src="chimchar.jpg" alt="Chimchar">
+                        <p>Chimchar</p>
                     </a>
-                    <a href="totodile.html">
-                        <img src="totodile.jpg" alt="Totodile">
-                        <p>Totodile</p>
-                    </a>
-                    <a href="eevee.html">
-                        <img src="eevee.jpg" alt="Eevee">
-                        <p>Eevee</p>
+                    <a href="piplup.html">
+                        <img src="piplup.jpg" alt="Piplup">
+                        <p>Piplup</p>
                     </a>
                     
 
-                    <!-- <a href="pokemons/johto/pokemon_name.html">
+                    <!-- <a href="pokemon_name.html">
                         <img src="pokemon_name.jpg" alt="Pokemon Name">
                         <p>Pokemon Name</p>
                     </a> -->
                 </div>
             </section>
-            
+
 
         </div>
     </main>
 
-    <footer class="mt-4 bg-light text-center">
-        <p>&copy; 2023 Pokemon Gallery</p>
+    <footer class="mt-4">
+        <p>&copy;2023 Mohammad Hanif Furqan Aufa Putra - GDSC Last Project </p>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-Yf5gtC4C9pDVAiz7e4TF5Jc2I7sMHsU/7Jd5xiF/lvHHZ5a4Y5tDw5v5Y2f5P1tA" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="scripts/searchresult.js"></script>
+
 </body>
 </html>
