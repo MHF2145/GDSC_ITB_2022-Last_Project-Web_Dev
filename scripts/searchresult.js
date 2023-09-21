@@ -3,28 +3,27 @@ document.addEventListener("DOMContentLoaded", function () {
     const query = urlParams.get("query");
 
     if (query) {
-        // Define the GitHub repository and file path
-        const repository = "MHF2145/GDSC_ITB_2022-Last_Project-Web_Dev";
-        const filePaths = [
+        // Define the GitHub Pages URL for your repository
+        const githubPagesUrl = "https://mhf2145.github.io/GDSC_ITB_2022-Last_Project-Web_Dev/";
+
+        // Construct the URL to your HTML file on GitHub Pages
+        const htmlUrl =
+        [
             `pokemons/sinnoh/${query}.html`,
             `pokemons/kanto/${query}.html`,
             `pokemons/johto/${query}.html`,
             `pokemons/hoenn/${query}.html`,
         ];
 
-        // Construct the API URL
-        const apiUrl = `https://api.github.com/repos/${GDSC_ITB_2022-Last_Project-Web_Dev}/contents/${filePath}`;
-
-        // Fetch the content using the GitHub API
-        fetch(apiUrl)
+        // Fetch and display the content from GitHub Pages
+        fetch(htmlUrl)
             .then((response) => {
                 if (!response.ok) {
                     throw new Error("File not found");
                 }
-                return response.json();
+                return response.text();
             })
-            .then((data) => {
-                const htmlContent = atob(data.content); // Decode the content
+            .then((htmlContent) => {
                 const resultContainer = document.getElementById("search-result");
                 resultContainer.innerHTML = htmlContent;
             })
