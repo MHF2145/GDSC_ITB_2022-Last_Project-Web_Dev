@@ -3,40 +3,29 @@ document.addEventListener("DOMContentLoaded", function () {
     const query = urlParams.get("query");
 
     if (query) {
-        // Define an array of possible file paths
-        const filePaths = [
-            `pokemons/sinnoh/${query}.html`,
-            `pokemons/kanto/${query}.html`,
-            `pokemons/johto/${query}.html`,
-            `pokemons/hoenn/${query}.html`,
-        ];
+        // Define the GitHub repository and file path
+        const repository = "MHF2145/GDSC_ITB_2022-Last_Project-Web_Dev";
+        const filePath = `pokemons/sinnoh/${query}.html`;
 
-        // Initialize a variable to track if the file was found
-        let fileFound = false;
+        // Construct the API URL
+        const apiUrl = `https://api.github.com/repos/${repository}/contents/${filePath}`;
 
-        // Function to attempt fetching a file
-        const tryFetchFile = (filePath) => {
-            return fetch(filePath)
-                .then((response) => {
-                    if (!response.ok) {
-                        throw new Error("File not found");
-                    }
-                    return response.text();
-                })
-                .then((htmlContent) => {
-                    const resultContainer = document.getElementById("search-result");
-                    resultContainer.innerHTML = htmlContent;
-                    fileFound = true; // Mark as found if successful
-                })
-                .catch((error) => {});
-        };
-
-        // Try fetching files from each path until one is found
-        Promise.all(filePaths.map(tryFetchFile)).then(() => {
-            if (!fileFound) {
+        // Fetch the content using the GitHub API
+        fetch(apiUrl)
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error("File not found");
+                }
+                return response.json();
+            })
+            .then((data) => {
+                const htmlContent = atob(data.content); // Decode the content
+                const resultContainer = document.getElementById("search-result");
+                resultContainer.innerHTML = htmlContent;
+            })
+            .catch((error) => {
                 handleNoQuery();
-            }
-        });
+            });
     } else {
         handleNoQuery();
     }
