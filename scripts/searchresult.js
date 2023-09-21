@@ -3,14 +3,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const query = urlParams.get("query");
 
     if (query) {
-        // Define the GitHub Pages URL for your repository
-        const githubPagesUrl = "https://mhf2145.github.io/GDSC_ITB_2022-Last_Project-Web_Dev/";
+        // Define the URL to your custom API endpoint
+        const apiUrl = `https://your-api-url.com/gethtml?query=${query}`;
 
-        // Construct the URL to your HTML file on GitHub Pages
-        const htmlUrl = `${githubPagesUrl}${query}.html`;
-
-        // Fetch and display the content from GitHub Pages
-        fetch(htmlUrl)
+        // Fetch and display the content from your custom API
+        fetch(apiUrl)
             .then((response) => {
                 if (!response.ok) {
                     throw new Error("File not found");
