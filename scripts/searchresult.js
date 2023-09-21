@@ -7,13 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const githubPagesUrl = "https://mhf2145.github.io/GDSC_ITB_2022-Last_Project-Web_Dev/";
 
         // Construct the URL to your HTML file on GitHub Pages
-        const htmlUrl =
-        [
-            `pokemons/sinnoh/${query}.html`,
-            `pokemons/kanto/${query}.html`,
-            `pokemons/johto/${query}.html`,
-            `pokemons/hoenn/${query}.html`,
-        ];
+        const htmlUrl = `${githubPagesUrl}${query}.html`;
 
         // Fetch and display the content from GitHub Pages
         fetch(htmlUrl)
