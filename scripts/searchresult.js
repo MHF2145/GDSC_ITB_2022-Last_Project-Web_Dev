@@ -5,10 +5,15 @@ document.addEventListener("DOMContentLoaded", function () {
     if (query) {
         // Define the GitHub repository and file path
         const repository = "MHF2145/GDSC_ITB_2022-Last_Project-Web_Dev";
-        const filePath = `pokemons/sinnoh/${query}.html`;
+        const filePaths = [
+            `pokemons/sinnoh/${query}.html`,
+            `pokemons/kanto/${query}.html`,
+            `pokemons/johto/${query}.html`,
+            `pokemons/hoenn/${query}.html`,
+        ];
 
         // Construct the API URL
-        const apiUrl = `https://api.github.com/repos/${repository}/contents/${filePath}`;
+        const apiUrl = `https://api.github.com/repos/${GDSC_ITB_2022-Last_Project-Web_Dev}/contents/${filePath}`;
 
         // Fetch the content using the GitHub API
         fetch(apiUrl)
