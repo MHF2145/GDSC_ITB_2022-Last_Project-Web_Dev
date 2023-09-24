@@ -5,8 +5,7 @@ Implementation HTML, CSS, JavaScript, and API
 
 In this case I like to make a Pokemon Gallery of Starter of 4 Regions
 
-Progress: 100%
-
+Progress: 100%(Except the search feature only working in the local launch)
 I discarded the pokemon search feature, but still implemented the search feature, I discarded the pokemon search system due to lack of experience in using the API.
 
 ![Home Page](image.png)
